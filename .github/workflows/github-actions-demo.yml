@@ -4,10 +4,12 @@ on:
       - develop
 name: Deploy
 jobs:
-  Explore-GitHub-Actions:
+  build:
+    name: Build Automation
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/develop'
     steps:
+      - uses: actions/checkout@v2
       - name: Set foobar to cool
         uses: mikefarah/yq@master
         with:
