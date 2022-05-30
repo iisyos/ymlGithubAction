@@ -19,3 +19,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Set foobar to cool
+        uses: mikefarah/yq@master
+        with:
+          cmd: yq -i '.a[0].aaa += 1'  a.yml
