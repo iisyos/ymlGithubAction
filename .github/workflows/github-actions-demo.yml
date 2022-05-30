@@ -12,9 +12,9 @@ jobs:
         uses: mikefarah/yq@master
         with:
           cmd: yq -i '.a[0].aaa += 1' a.yml
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add .
-          git commit -m "asset更新"
-          git push
+      # - run: |
+      #     git config user.name github-actions
+      #     git config user.email github-actions@github.com
+      #     git add .
+      #     git commit -m "asset更新"
+      #     git push
